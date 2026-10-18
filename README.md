@@ -1,5 +1,11 @@
 # Cobblemon
 
+This repository is an **unofficial, work-in-progress port to Minecraft Java 26.3**.
+It is not yet playable on 26.3. The original project is maintained at
+[Cable / Cobblemon on GitLab](https://gitlab.com/cable-mc/cobblemon).
+See [the incremental plan and GitHub issues](docs/plan.md) and
+[the porting notes](docs/porting-26.3.md) for milestones and verification status.
+
 An open-source Pokémon mod for Minecraft Java Edition, written in Kotlin for Fabric and NeoForge.
 
 ## Getting started
