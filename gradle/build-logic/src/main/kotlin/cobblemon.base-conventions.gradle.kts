@@ -26,9 +26,11 @@ group = rootProject.group
 version = rootProject.version
 description = rootProject.description
 
+val targetJavaVersion = providers.gradleProperty("java_version").map(String::toInt)
+
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(21))
+        languageVersion.set(targetJavaVersion.map(JavaLanguageVersion::of))
     }
 }
 
@@ -68,12 +70,12 @@ dependencies {
 tasks {
     withType<JavaCompile> {
         options.encoding = "UTF-8"
-        options.release.set(21)
+        options.release.set(targetJavaVersion)
         options.compilerArgs.add("-Xlint:-processing,-classfile,-serial")
     }
 
     withType<KotlinCompile> {
-        compilerOptions.jvmTarget.set(JvmTarget.JVM_21)
+        compilerOptions.jvmTarget.set(targetJavaVersion.map { JvmTarget.fromTarget(it.toString()) })
     }
 
     withType<Jar> {

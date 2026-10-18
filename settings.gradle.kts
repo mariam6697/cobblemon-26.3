@@ -15,11 +15,18 @@ pluginManagement {
 
 rootProject.name = "cobblemon"
 
-listOf(
-    "common",
-    "fabric",
-    "neoforge"
-).forEach { setupProject(it, file(it)) }
+val enabledPlatforms = providers.gradleProperty("enabled_platforms")
+    .orElse("fabric,neoforge")
+    .get()
+    .split(',')
+    .map(String::trim)
+    .distinct()
+
+require(enabledPlatforms.isNotEmpty() && enabledPlatforms.all { it in setOf("fabric", "neoforge") }) {
+    "enabled_platforms must contain fabric, neoforge, or both (comma-separated)."
+}
+
+(listOf("common") + enabledPlatforms).forEach { setupProject(it, file(it)) }
 
 fun setupProject(name: String, projectDirectory: File) = setupProject(name) {
     projectDir = projectDirectory
