@@ -45,3 +45,12 @@ common/.fabric
 # MacOS
 .DS_Store
 /common/config/*
+
+# Agent-local instructions and workspace state
+AGENTS.md
+.agents/
+.codex/
+.claude/
+
+# Local agent plans, progress, and scope changes
+/.agent-work/
