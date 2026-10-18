@@ -46,7 +46,7 @@ Sources:
 - [x] Preserve upstream history, license and credits in GitHub.
 - [x] Create the migration branch.
 - [x] Verify official 26.3 runtime and loader metadata.
-- [ ] Complete the 1.21.1 reference build and verify the preparatory changes.
+- [x] Compile the 1.21.1 reference with the preparatory changes (local cached build).
 - [ ] Configure the selected loader and common module for 26.3 / Java 25.
 - [ ] Resolve dependencies and produce a compiler error inventory.
 - [ ] Compile the common and loader modules.
@@ -92,7 +92,8 @@ It does not prove gameplay correctness or compatibility with 26.3.
 - Build-convention compilation with Java 21: passed.
 - Standalone 26.3 API probe with Java 25 / Gradle 9.6.0 / Architectury Loom 1.17.493:
   passed. Kotlin plugin 2.4.21, Fabric Loader 0.19.5 and Fabric API 0.163.0+26.3 resolved.
-- Full baseline builds: stopped to switch to incremental planning; no validated result.
+- Fabric 1.21.1 reference build: passed locally on 2026-10-18. See [build evidence and limits](baseline-build.md).
+- Clean-install reproducibility and CI: not validated yet; issue #1 remains open.
 - Full Cobblemon compilation against Minecraft 26.3: not attempted yet.
 - Client and dedicated server gameplay: not attempted yet.
 - Diagnostic logs retained locally in `.ignored/porting-logs/` (not versioned).

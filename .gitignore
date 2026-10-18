@@ -51,3 +51,6 @@ AGENTS.md
 .agents/
 .codex/
 .claude/
+
+# Local agent plans, progress, and scope changes
+/.agent-work/
