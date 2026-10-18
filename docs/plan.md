@@ -10,6 +10,7 @@ Fabric has only been used for preliminary development checks.
 - [Port requirements and acceptance criteria](requirements/port-26.3.md)
 - [Incremental development decision](decisions/0001-incremental-port.md)
 - [Technical migration notes](porting-26.3.md)
+- [26.3 dependency audit and open loader decision](dependency-audit-26.3.md)
 
 ## Work packages
 

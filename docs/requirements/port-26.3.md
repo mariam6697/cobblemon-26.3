@@ -41,4 +41,7 @@ See [baseline CI](../baseline-ci.md) for the workflow and validation status.
 - Scope and effort of each migration work package after the compiler inventory.
 
 Fabric is a preliminary development choice, not a confirmed user requirement.
+The [dependency audit](../dependency-audit-26.3.md) records publication evidence,
+proposed integration deferrals and reusable upstream 26.1.2 work. Those proposals
+do not approve a loader, dependency removal or broad upstream import.
 See [the roadmap](../plan.md) for issue links and dependencies.
