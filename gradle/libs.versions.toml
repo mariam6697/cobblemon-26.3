@@ -9,8 +9,8 @@ blossom = "2.1.0"
 idea-ext = "1.1.7"
 
 # Minecraft Development
-loom = "1.11-SNAPSHOT"
-architectury-plugin = "3.4-SNAPSHOT"
+loom = "1.11.458"
+architectury-plugin = "3.4.164"
 moddev = "1.0.11"
 
 # Common

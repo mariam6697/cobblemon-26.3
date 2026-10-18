@@ -61,8 +61,12 @@ build, not proof of clean-environment reproducibility.
 No client startup, Pokémon capture, battle, persistence or dedicated-server
 behavior has been tested. The user's active server was not changed.
 
-## Next increment
+## Follow-up
 
-Issue [#1](https://github.com/mariam6697/cobblemon-26.3/issues/1) remains open.
-Reproduce the baseline in a clean CI environment and document any resulting
-platform/dependency issues before starting the 26.3 source migration.
+A later [clean local reproduction and CI configuration](baseline-ci.md) passed
+with an empty dependency cache and no build-cache hits. That record also documents
+the pinned tool versions. The cached run above remains a separate historical result.
+
+Issue [#1](https://github.com/mariam6697/cobblemon-26.3/issues/1) remains open until
+the hosted CI workflow succeeds. Document any platform/dependency issues before
+starting the 26.3 source migration.
