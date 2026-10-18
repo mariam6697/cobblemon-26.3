@@ -24,6 +24,16 @@ persist its results. Repeat core checks against a dedicated server with two clie
 - Tests run in disposable worlds and separate test servers; deployment to the
   user's active server requires separate authorization.
 
+## Baseline CI check
+
+Before migration, CI must compile the Fabric 1.21.1 / Java 21 reference on pull
+requests targeting `main`, pushes to `main`, and manual runs. Each job must use a
+fresh Gradle dependency directory without restoring a build cache. A failed build
+or invalid production JAR must fail the check. Successful runs must provide the
+reference JAR and a verification report; this is not a playable 26.3 release.
+
+See [baseline CI](../baseline-ci.md) for the workflow and validation status.
+
 ## Unresolved questions
 
 - Existing server loader: vanilla, Fabric or NeoForge.
